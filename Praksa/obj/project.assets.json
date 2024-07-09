@@ -533,11 +533,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aleksandra\\Desktop\\Praksa\\Praksa\\Praksa\\Praksa.csproj",
+      "projectUniqueName": "C:\\Users\\Aleksandra\\Desktop\\Zadatak\\praksaNew\\Praksa\\Praksa.csproj",
       "projectName": "Praksa",
-      "projectPath": "C:\\Users\\Aleksandra\\Desktop\\Praksa\\Praksa\\Praksa\\Praksa.csproj",
+      "projectPath": "C:\\Users\\Aleksandra\\Desktop\\Zadatak\\praksaNew\\Praksa\\Praksa.csproj",
       "packagesPath": "C:\\Users\\Aleksandra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aleksandra\\Desktop\\Praksa\\Praksa\\Praksa\\obj\\",
+      "outputPath": "C:\\Users\\Aleksandra\\Desktop\\Zadatak\\praksaNew\\Praksa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aleksandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
