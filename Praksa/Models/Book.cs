@@ -1,4 +1,4 @@
-﻿namespace Praksa
+﻿namespace Praksa.Models
 {
     public class Book
     {
@@ -7,6 +7,6 @@
 
         public string Autor { get; set; }
 
-        public DateTime datumPublikacije { get; set; }
+        public DateTime datumIzdavanja { get; set; }
     }
 }
