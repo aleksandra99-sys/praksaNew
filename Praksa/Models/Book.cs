@@ -3,10 +3,10 @@
     public class Book
     {
         public int Id { get; set; }
-        public string Naziv { get; set; }
+        public string Name { get; set; }
 
-        public string Autor { get; set; }
+        public Author Author { get; set; }
 
-        public DateTime datumIzdavanja { get; set; }
+        public DateTime ReleaseDate { get; set; }
     }
 }
