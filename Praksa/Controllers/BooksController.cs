@@ -32,5 +32,16 @@ namespace Praksa.Controllers
         {
             BooksRepository.Books.RemoveAt(id);
         }
+
+        [HttpPut]
+        public Book PutBook(Book book)
+        {
+            var editBook = BooksRepository.Books.FirstOrDefault(n => n.Id == book.Id);
+            editBook.Id = book.Id;
+            editBook.Name = book.Name;
+            editBook.Author = book.Author;
+            editBook.ReleaseDate = book.ReleaseDate;
+            return editBook;
+        }
     }
 }
