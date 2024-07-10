@@ -8,11 +8,17 @@ namespace Praksa.Controllers
     public class BooksController : ControllerBase
     {
         [HttpGet]
-
-        public List<Book> Books()
+        public List<Book> GetBooks()
         {
             return BooksRepository.Books; 
             
+        }
+
+        [HttpGet("id:int")]
+        public Book GetBookById(int id)
+        {
+            return BooksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
+
         }
     }
 }
