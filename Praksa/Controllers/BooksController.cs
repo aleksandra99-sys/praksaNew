@@ -20,5 +20,11 @@ namespace Praksa.Controllers
             return BooksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
 
         }
+
+        [HttpPost]
+        public void PostBook(Book book)
+        {
+            BooksRepository.Books.Add(book);
+        }
     }
 }
