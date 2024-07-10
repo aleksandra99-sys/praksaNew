@@ -26,5 +26,11 @@ namespace Praksa.Controllers
         {
             BooksRepository.Books.Add(book);
         }
+
+        [HttpDelete("id:int")] //Index krece od nule, ako stavim id = 2 izbrisace se knjiga za koju pise da ima id = 3
+        public void DeleteBook(int id)
+        {
+            BooksRepository.Books.RemoveAt(id);
+        }
     }
 }
