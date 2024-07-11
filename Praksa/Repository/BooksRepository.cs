@@ -2,9 +2,9 @@
 
 namespace Praksa.Repository
 {
-    public static class BooksRepository
+    public class BooksRepository
     {
-        public static List<Book> Books { get; set; } = new List<Book>()
+        public List<Book> Books { get; set; } = new List<Book>()
         {
                 new Book
                 {

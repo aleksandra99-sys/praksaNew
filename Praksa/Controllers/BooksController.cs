@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Praksa.Models;
+using Praksa.Repository;
 
 namespace Praksa.Controllers
 {
@@ -7,38 +8,42 @@ namespace Praksa.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
+        private BooksRepository _booksRepository = new BooksRepository();
+        
+
+
         [HttpGet]
         public List<Book> GetBooks()
         {
-            return BooksRepository.Books; 
+            return _booksRepository.Books;
             
         }
 
         [HttpGet("{id}")]
         public Book GetBookById(int id)
         {
-            return BooksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
+            return _booksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
 
         }
 
         [HttpPost]
         public Book PostBook(Book book)
         {
-            BooksRepository.Books.Add(book);
+            _booksRepository.Books.Add(book);
             return book;
         }
 
         [HttpDelete("{id}")] 
         public void DeleteBook(int id)
         {
-            var deleteBook = BooksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
-            BooksRepository.Books.Remove(deleteBook);
+            var deleteBook = _booksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
+            _booksRepository.Books.Remove(deleteBook);
         }
 
         [HttpPut]
         public Book PutBook(Book book)
         {
-            var editBook = BooksRepository.Books.FirstOrDefault(n => n.Id == book.Id);
+            var editBook = _booksRepository.Books.FirstOrDefault(n => n.Id == book.Id);
             editBook.Id = book.Id;
             editBook.Name = book.Name;
             editBook.Author = book.Author;
