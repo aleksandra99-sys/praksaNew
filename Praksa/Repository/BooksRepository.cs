@@ -1,4 +1,6 @@
-﻿namespace Praksa.Models
+﻿using Praksa.Models;
+
+namespace Praksa.Repository
 {
     public static class BooksRepository
     {
@@ -9,21 +11,21 @@
                     Id = 1,
                     Name = "Pride and Prejudice",
                     Author = "Jane Austin",
-                    ReleaseDate = 1813
+                    ReleaseDate = new DateTime(1813, 1, 28)
                 },
                 new Book
                 {
                     Id = 2,
                     Name = "To Kill a Mockingbird",
                     Author = "Harper Lee",
-                    ReleaseDate = 1960
+                    ReleaseDate = new DateTime(1960, 7, 11)
                 },
                 new Book
                 {
                     Id = 3,
                     Name = "The Great Gatsby",
                     Author = "Scott Fitzgerald",
-                    ReleaseDate = 1925
+                    ReleaseDate = new DateTime(1925, 4, 10)
                 }
         };
     }

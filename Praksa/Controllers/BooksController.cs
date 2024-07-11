@@ -14,7 +14,7 @@ namespace Praksa.Controllers
             
         }
 
-        [HttpGet("id:int")]
+        [HttpGet("{id}")]
         public Book GetBookById(int id)
         {
             return BooksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
@@ -22,15 +22,17 @@ namespace Praksa.Controllers
         }
 
         [HttpPost]
-        public void PostBook(Book book)
+        public Book PostBook(Book book)
         {
             BooksRepository.Books.Add(book);
+            return book;
         }
 
-        [HttpDelete("id:int")] //Index krece od nule, ako stavim id = 2 izbrisace se knjiga za koju pise da ima id = 3
+        [HttpDelete("{id}")] 
         public void DeleteBook(int id)
         {
-            BooksRepository.Books.RemoveAt(id);
+            var deleteBook = BooksRepository.Books.Where(n => n.Id == id).FirstOrDefault();
+            BooksRepository.Books.Remove(deleteBook);
         }
 
         [HttpPut]
