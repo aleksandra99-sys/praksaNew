@@ -1,9 +1,11 @@
-﻿using Praksa.Models;
+﻿using Praksa.Controllers;
+using Praksa.Models;
 
 namespace Praksa.Repository
 {
-    public class BooksRepository
+    public class BooksRepository : IBooks
     {
+        
         public List<Book> Books { get; set; } = new List<Book>()
         {
                 new Book
@@ -28,5 +30,32 @@ namespace Praksa.Repository
                     ReleaseDate = new DateTime(1925, 4, 10)
                 }
         };
+
+        public void DeleteBook(int id)
+        {
+            var deleteBook = Books.Where(n => n.Id == id).FirstOrDefault();
+            Books.Remove(deleteBook);
+        }
+
+        public Book GetBookById(int id)
+        {
+            return Books.Where(n => n.Id == id).FirstOrDefault();
+        }
+
+        public Book PostBook(Book book)
+        {
+            Books.Add(book);
+            return book;
+        }
+
+        public Book PutBook(Book book)
+        {
+            var editBook =Books.FirstOrDefault(n => n.Id == book.Id);
+            editBook.Id = book.Id;
+            editBook.Name = book.Name;
+            editBook.Author = book.Author;
+            editBook.ReleaseDate = book.ReleaseDate;
+            return editBook;
+        }
     }
 }
