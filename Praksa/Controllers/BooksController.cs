@@ -17,10 +17,10 @@ namespace Praksa.Controllers
 
 
         [HttpGet]
-      //public List<Book> GetBooks()
-        //{
-         //   return _booksRepository.GetBooks(); 
-        //}
+      public List<Book> GetBooks()
+       {
+          return _booksRepository.GetBooks(); 
+        }
 
         [HttpGet("{id}")]
         public Book GetBookById(int id)

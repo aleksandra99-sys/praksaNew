@@ -42,6 +42,11 @@ namespace Praksa.Repository
             return Books.Where(n => n.Id == id).FirstOrDefault();
         }
 
+        public List<Book> GetBooks()
+        {
+            return Books;
+        }
+
         public Book PostBook(Book book)
         {
             Books.Add(book);

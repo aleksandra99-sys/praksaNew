@@ -8,9 +8,6 @@ namespace Praksa.Repository
         public Book PutBook(Book book);
         public Book PostBook(Book book);
         public Book GetBookById(int id);
-        //public List<Book> GetBooks()
-        //{
-          
-        //}
+        public List<Book> GetBooks();
     }
 }
