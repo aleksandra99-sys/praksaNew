@@ -1,8 +1,8 @@
 ﻿using Praksa.Models;
 
-namespace Praksa.Repository
+namespace Praksa.Services
 {
-    public interface IBooks
+    public interface IBookServices
     {
         public void DeleteBook(int id);
         public Book PutBook(Book book);

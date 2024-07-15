@@ -1,9 +1,10 @@
 ﻿using Praksa.Controllers;
 using Praksa.Models;
+using Praksa.Services;
 
 namespace Praksa.Repository
 {
-    public class BooksRepository : IBooks
+    public class BooksRepository : IBooksRepository
     {
         
         public List<Book> Books { get; set; } = new List<Book>()

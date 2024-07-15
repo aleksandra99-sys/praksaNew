@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Praksa.Models;
-using Praksa.Repository;
+using Praksa.Services;
 
 namespace Praksa.Controllers
 {
@@ -8,43 +8,43 @@ namespace Praksa.Controllers
     [ApiController]
     public class BooksController : ControllerBase 
     {
-        private IBooks _booksRepository;
+        private IBookServices _bookServices;
 
-        public BooksController(IBooks booksRepository)
+        public BooksController(IBookServices bookServices)
         {
-            _booksRepository = booksRepository;
+            _bookServices = bookServices;
         }
 
 
         [HttpGet]
       public List<Book> GetBooks()
        {
-          return _booksRepository.GetBooks(); 
+          return _bookServices.GetBooks(); 
         }
 
         [HttpGet("{id}")]
         public Book GetBookById(int id)
         {
-            return _booksRepository.GetBookById(id);
+            return _bookServices.GetBookById(id);
         }
 
         [HttpPost]
         public Book PostBook(Book book)
         {
-            return _booksRepository.PostBook(book);
+            return _bookServices.PostBook(book);
         }
 
         [HttpDelete("{id}")]
         public void DeleteBook(int id)
         {
-            _booksRepository.DeleteBook(id);
+            _bookServices.DeleteBook(id);
         }
             
 
         [HttpPut]
         public Book PutBook(Book book)
         {
-            return _booksRepository.PutBook(book);
+            return _bookServices.PutBook(book);
         }
     }
 }
