@@ -46,9 +46,10 @@ namespace Praksa.Services
 
         public Book PutBook(Book book)
         {
-            if(book.Id == null)
+            var books = _booksRepository.GetBookById(book.Id);
+            if (books == null)
             {
-                throw new Exception($"Book with id was not found");
+                throw new Exception($"Book with id {book.Id} was not found");
             }
             return _booksRepository.PutBook(book);
         }
