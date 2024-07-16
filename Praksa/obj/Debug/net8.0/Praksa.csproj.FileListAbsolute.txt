@@ -63,3 +63,4 @@ C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\obj\Debug\net8.0\scopedcss\
 C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\obj\Debug\net8.0\Praksa.csproj.Up2Date
 C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\obj\Debug\net8.0\Praksa.genruntimeconfig.cache
 C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\obj\Debug\net8.0\ref\Praksa.dll
+C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\bin\Debug\net8.0\GlobalExceptionHandler.dll

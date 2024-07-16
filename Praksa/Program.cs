@@ -13,6 +13,7 @@ builder.Services.AddSingleton<IBooksRepository, BooksRepository>();
 builder.Services.AddScoped<IBookServices, BookServices>();
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

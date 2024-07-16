@@ -41,7 +41,7 @@ namespace Praksa.Repository
         public Book GetBookById(int id)
         {
             return Books.Where(n => n.Id == id).FirstOrDefault();
-        }
+        } 
 
         public List<Book> GetBooks()
         {
@@ -56,7 +56,7 @@ namespace Praksa.Repository
 
         public Book PutBook(Book book)
         {
-            var editBook =Books.FirstOrDefault(n => n.Id == book.Id);
+            var editBook = Books.FirstOrDefault(n => n.Id == book.Id);
             editBook.Id = book.Id;
             editBook.Name = book.Name;
             editBook.Author = book.Author;
