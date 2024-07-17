@@ -41,6 +41,15 @@ namespace Praksa.Services
 
         public Book PostBook(Book book)
         {
+            var bookList = _booksRepository.GetBooks();
+            for (int i = 0; i < bookList.Count; i++)
+            {
+                Console.WriteLine(bookList[i]);
+                if (bookList[i].Name == book.Name && bookList[i].Author == book.Author)
+                {
+                    throw new Exception("Knjiga vec postoji");
+                }
+            }
            return _booksRepository.PostBook(book);
         }
 
