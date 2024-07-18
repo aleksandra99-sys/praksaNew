@@ -64,3 +64,4 @@ C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\obj\Debug\net8.0\Praksa.csp
 C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\obj\Debug\net8.0\Praksa.genruntimeconfig.cache
 C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\obj\Debug\net8.0\ref\Praksa.dll
 C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\bin\Debug\net8.0\GlobalExceptionHandler.dll
+C:\Users\Aleksandra\Desktop\Zadatak\praksaNew\Praksa\bin\Debug\net8.0\Newtonsoft.Json.dll

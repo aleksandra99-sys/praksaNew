@@ -1,4 +1,5 @@
-﻿using Praksa.Models;
+﻿using Praksa.Exceptions;
+using Praksa.Models;
 using Praksa.Repository;
 using static System.Reflection.Metadata.BlobBuilder;
 
@@ -19,7 +20,7 @@ namespace Praksa.Services
             var book = _booksRepository.GetBookById(id);
             if (book == null) 
             {
-                throw new Exception($"Book with id {id} was not found");
+                throw new NotFoundException($"Book with id {id} was not found");
             }
             _booksRepository.DeleteBook(id);
         }
@@ -29,7 +30,7 @@ namespace Praksa.Services
             var book = _booksRepository.GetBookById(id);
             if (book == null)
             {
-                throw new Exception($"Book with id {id} was not found");
+                throw new NotFoundException($"Book with id {id} was not found");
             }
             return book;
         } 
@@ -47,7 +48,7 @@ namespace Praksa.Services
                 Console.WriteLine(bookList[i]);
                 if (bookList[i].Name == book.Name && bookList[i].Author == book.Author)
                 {
-                    throw new Exception("Knjiga vec postoji");
+                    throw new ForbiddenException("Knjiga vec postoji"); //Ovde je mogao 409 Conflict
                 }
             }
            return _booksRepository.PostBook(book);
@@ -58,7 +59,7 @@ namespace Praksa.Services
             var books = _booksRepository.GetBookById(book.Id);
             if (books == null)
             {
-                throw new Exception($"Book with id {book.Id} was not found");
+                throw new NotFoundException($"Book with id {book.Id} was not found"); 
             }
             return _booksRepository.PutBook(book);
         }
